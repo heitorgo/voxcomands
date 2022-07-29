@@ -1,0 +1,4 @@
+open\notepad
+time\getTime
+time\getDate
+weather\getWeather
