@@ -1,11 +1,6 @@
-time\getTime
 open\chrome
-math\getMultiplOne
-math\getMultiplFive
-math\getMultiplFour
-math\getMultiplSix
-math\getMultiplThree
-time\getDate
+open\wMP
 open\notepad
-math\getMultiplTwo
+time\getTime
 open\word
+time\getDate

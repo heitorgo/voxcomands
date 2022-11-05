@@ -28,38 +28,19 @@ def evaluate(text):
         return ""
     elif entity == 'time\getDate':
         speak(core.SystemInfo.get_date())
-    # Funções Matemáticas
-    # Tabuada
-    elif entity == 'math\getMultiplOne':
-        speak(core.SystemInfo.get_multiplOne())
-    elif entity == 'math\getMultiplTwo':
-        speak(core.SystemInfo.get_multiplTwo())
-    elif entity == 'math\getMultiplThree':
-        speak(core.SystemInfo.get_multiplThree())
-    elif entity == 'math\getMultiplFour':
-        speak(core.SystemInfo.get_multiplFour())
-    elif entity == 'math\getMultiplFive':
-        speak(core.SystemInfo.get_multiplFive())
-    elif entity == 'math\getMultiplSix':
-        speak(core.SystemInfo.get_multiplSix())
-    elif entity == 'math\getMultiplSeven':
-        speak(core.SystemInfo.get_multiplSeven())
-    elif entity == 'math\getMultiplEigth':
-        speak(core.SystemInfo.get_multiplEight())
-    elif entity == 'math\getMultiplNine':
-        speak(core.SystemInfo.get_multiplNine())
-    elif entity == 'math\getMultiplTen':
-        speak(core.SystemInfo.get_multiplTen())
     # Abrir programas
     elif entity == 'open\\notepad':
         speak('Abrindo o bloco de notas')
         os.system('notepad.exe')
     elif entity == 'open\\word':
         speak('Abrindo o word')
-        os.system('C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE')
+        os.system('"C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE"')
     elif entity == 'open\\chrome':
         speak('Abrindo o chrome')
         os.system('"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"')
+    elif entity == 'open\\wMP':
+        speak('Abrindo o reprodutor de mídia')
+        os.system('"C:\\Program Files (x86)\\Windows Media Player\\wmplayer.exe"')
 
     print('Text: {} Entity: {}' .format(text, entity))
     return text

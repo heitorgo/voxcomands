@@ -25,62 +25,6 @@ commands:
     input:  Informe a data de hoje.
     entity: time
     action: getDate
-  # Matemática
-  # Tabuada
-  # Um
-  - command:
-    input: Quero saber a tabuada do um
-    entity: math
-    action: getMultiplOne
-  - command:
-    input: Quero saber a taboada do um
-    entity: math
-    action: getMultiplOne
-  # Dois
-  - command:
-    input: Quero saber a tabuada do dois
-    entity: math
-    action: getMultiplTwo
-  - command:
-    input: Quero saber a taboada do dois
-    entity: math
-    action: getMultiplTwo
-  # Tres
-  - command:
-    input: Quero saber a tabuada do três
-    entity: math
-    action: getMultiplThree
-  - command:
-    input: Quero saber a taboada do três
-    entity: math
-    action: getMultiplThree
-  # Quatro
-  - command:
-    input: Quero saber a tabuada do quatro
-    entity: math
-    action: getMultiplFour
-  - command:
-    input: Quero saber a taboada do quatro
-    entity: math
-    action: getMultiplFour
-  # Cinco
-  - command:
-    input: Quero saber a tabuada do cinco
-    entity: math
-    action: getMultiplFive
-  - command:
-    input: Quero saber a taboada do cinco
-    entity: math
-    action: getMultiplFive
-  # Seis
-  - command:
-    input: Quero saber a tabuada do seis
-    entity: math
-    action: getMultiplSix
-  - command:
-    input: Quero saber a taboada do seis
-    entity: math
-    action: getMultiplSix
   # Abrir
   # Bloco de notas
   - command:
@@ -109,3 +53,12 @@ commands:
     input:  Abra o chrome
     entity: open
     action: chrome
+  # Windows Media Player
+  - command:
+    input:  Abrir o reprodutor de mídia
+    entity: open
+    action: wMP
+  - command:
+    input:  Abra o reprodutor de mídia
+    entity: open
+    action: wMP
