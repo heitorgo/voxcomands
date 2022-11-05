@@ -1,4 +1,11 @@
-open\notepad
 time\getTime
+open\chrome
+math\getMultiplOne
+math\getMultiplFive
+math\getMultiplFour
+math\getMultiplSix
+math\getMultiplThree
 time\getDate
-weather\getWeather
+open\notepad
+math\getMultiplTwo
+open\word

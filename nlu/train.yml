@@ -25,16 +25,64 @@ commands:
     input:  Informe a data de hoje.
     entity: time
     action: getDate
-  # Tempo
+  # Matemática
+  # Tabuada
+  # Um
   - command:
-    input:  previsão do tempo
-    entity: weather
-    action: getWeather
+    input: Quero saber a tabuada do um
+    entity: math
+    action: getMultiplOne
   - command:
-    input:  Como está o clima?
-    entity: weather
-    action: getWeather
-  # Open
+    input: Quero saber a taboada do um
+    entity: math
+    action: getMultiplOne
+  # Dois
+  - command:
+    input: Quero saber a tabuada do dois
+    entity: math
+    action: getMultiplTwo
+  - command:
+    input: Quero saber a taboada do dois
+    entity: math
+    action: getMultiplTwo
+  # Tres
+  - command:
+    input: Quero saber a tabuada do três
+    entity: math
+    action: getMultiplThree
+  - command:
+    input: Quero saber a taboada do três
+    entity: math
+    action: getMultiplThree
+  # Quatro
+  - command:
+    input: Quero saber a tabuada do quatro
+    entity: math
+    action: getMultiplFour
+  - command:
+    input: Quero saber a taboada do quatro
+    entity: math
+    action: getMultiplFour
+  # Cinco
+  - command:
+    input: Quero saber a tabuada do cinco
+    entity: math
+    action: getMultiplFive
+  - command:
+    input: Quero saber a taboada do cinco
+    entity: math
+    action: getMultiplFive
+  # Seis
+  - command:
+    input: Quero saber a tabuada do seis
+    entity: math
+    action: getMultiplSix
+  - command:
+    input: Quero saber a taboada do seis
+    entity: math
+    action: getMultiplSix
+  # Abrir
+  # Bloco de notas
   - command:
     input:  Abrir bloco de notas
     entity: open
@@ -43,8 +91,21 @@ commands:
     input:  Abra o bloco de notas
     entity: open
     action: notepad
-  # Close
+  # Word
   - command:
-    input:  Feche bloco de notas
-    entity: close
-    action: notepad
+    input:  Abrir o word
+    entity: open
+    action: word
+  - command:
+    input:  Abra o word
+    entity: open
+    action: word
+  # Google Chrome
+  - command:
+    input:  Abrir o chrome
+    entity: open
+    action: chrome
+  - command:
+    input:  Abra o chrome
+    entity: open
+    action: chrome

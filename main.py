@@ -2,14 +2,14 @@
 
 import argparse
 import json
-import os,psutil
+import os
 import queue
 import sounddevice as sd
 import vosk
 import sys
 import pyttsx3
 import core
-from nlu.classifier import classify
+from nlu.classifier import classify,max_seq
 
 # SINTESE DE FALA
 engine = pyttsx3.init()
@@ -21,24 +21,48 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
-def close_program(name):
-    for process in (process for process in psutil.process_iter() if process.name()==name):
-        process.kill()
-
 def evaluate(text):
     entity = classify(text)
-    if text != "":
-        if entity == 'time\getTime':
-            speak(core.SystemInfo.get_time())
-        elif entity == 'time\getDate':
-            speak(core.SystemInfo.get_date())
-        # Abrir programas
-        elif entity == 'open\\notepad':
-            speak('Abrindo o bloco de notas')
-            os.system('notepad.exe')
-        elif entity == 'close\\notepad':
+    if entity == 'time\getTime':
+        speak(core.SystemInfo.get_time())
+        return ""
+    elif entity == 'time\getDate':
+        speak(core.SystemInfo.get_date())
+    # Funções Matemáticas
+    # Tabuada
+    elif entity == 'math\getMultiplOne':
+        speak(core.SystemInfo.get_multiplOne())
+    elif entity == 'math\getMultiplTwo':
+        speak(core.SystemInfo.get_multiplTwo())
+    elif entity == 'math\getMultiplThree':
+        speak(core.SystemInfo.get_multiplThree())
+    elif entity == 'math\getMultiplFour':
+        speak(core.SystemInfo.get_multiplFour())
+    elif entity == 'math\getMultiplFive':
+        speak(core.SystemInfo.get_multiplFive())
+    elif entity == 'math\getMultiplSix':
+        speak(core.SystemInfo.get_multiplSix())
+    elif entity == 'math\getMultiplSeven':
+        speak(core.SystemInfo.get_multiplSeven())
+    elif entity == 'math\getMultiplEigth':
+        speak(core.SystemInfo.get_multiplEight())
+    elif entity == 'math\getMultiplNine':
+        speak(core.SystemInfo.get_multiplNine())
+    elif entity == 'math\getMultiplTen':
+        speak(core.SystemInfo.get_multiplTen())
+    # Abrir programas
+    elif entity == 'open\\notepad':
+        speak('Abrindo o bloco de notas')
+        os.system('notepad.exe')
+    elif entity == 'open\\word':
+        speak('Abrindo o word')
+        os.system('C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE')
+    elif entity == 'open\\chrome':
+        speak('Abrindo o chrome')
+        os.system('"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"')
 
-        print('Text: {} Entity: {}' .format(text, entity))
+    print('Text: {} Entity: {}' .format(text, entity))
+    return text
 
 q = queue.Queue()
 
@@ -81,6 +105,8 @@ parser.add_argument(
 args = parser.parse_args(remaining)
 
 try:
+    speak('Olá, sou sua assistente virtual...')
+
     if args.model is None:
         args.model = "model"
     if not os.path.exists(args.model):
@@ -102,29 +128,33 @@ try:
         dump_fn = None
 
     with sd.RawInputStream(samplerate=args.samplerate, blocksize = 8000, device=args.device, dtype='int16',
-                            channels=1, callback=callback):
-            print('#' * 80)
-            print('Press Ctrl+C to stop the recording')
-            print('#' * 80)
+    channels=1, callback=callback):
 
-            rec = vosk.KaldiRecognizer(model, args.samplerate)
+    
 
 # LOOP DO RECONHECIMENTO
-            while True:
-                data = q.get()
-                if rec.AcceptWaveform(data):
-                    result = rec.Result()
-                    result = json.loads(result)
-                    
-                    if result is not None:
+        print('#' * 80)
+        print('Press Ctrl+C to stop the recording')
+        print('#' * 80)
+        rec = vosk.KaldiRecognizer(model, args.samplerate)
+        while True:
+            data = q.get()
+            if rec.AcceptWaveform(data):
+                result = rec.Result()
+                result = json.loads(result)
+                if result is not None:
+                    if result['text'] != "":
                         text = result['text']
-                        
-                        #Reconhecer entidade do texto
-                        evaluate(text)
-                else:
-                    print(rec.PartialResult())
-                if dump_fn is not None:
-                    dump_fn.write(data)
+                        if len(text) > max_seq:
+                            text = ""
+                        elif len(text) < max_seq:
+                            evaluate(text)
+                            parser.exit(0)
+
+            else:
+                print(rec.PartialResult())
+            if dump_fn is not None:
+                dump_fn.write(data)
 
 except KeyboardInterrupt:
     print('\nDone')
