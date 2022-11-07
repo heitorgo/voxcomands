@@ -1,8 +1,7 @@
 import yaml
 import numpy as np
-import tensorflow as tf
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense, Embedding
+from tensorflow.keras.layers import LSTM, Dense
 from tensorflow.keras.utils import to_categorical
 
 data = yaml.safe_load(open('nlu\\train.yml', 'r', encoding='utf-8').read())

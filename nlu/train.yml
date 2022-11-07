@@ -44,15 +44,6 @@ commands:
     input:  Abra o word
     entity: open
     action: word
-  # Google Chrome
-  - command:
-    input:  Abrir o chrome
-    entity: open
-    action: chrome
-  - command:
-    input:  Abra o chrome
-    entity: open
-    action: chrome
   # Windows Media Player
   - command:
     input:  Abrir o reprodutor de mídia
@@ -62,3 +53,81 @@ commands:
     input:  Abra o reprodutor de mídia
     entity: open
     action: wMP
+  # Dosvox
+  - command:
+    input: Abrir o dosvox
+    entity: open
+    action: dosvox
+  - command:
+    input: Abra o dosvox
+    entity: open
+    action: dosvox
+  - command:
+    input: Abra o dose rock
+    entity: open
+    action: dosvox
+  # Jaws
+  - command:
+    input: Abrir o jaws
+    entity: open
+    action: jaws
+  - command:
+    input: Abra o jaws
+    entity: open
+    action: jaws
+  # Mecfaisy
+  - command:
+    input: Abrir o mecdaisy
+    entity: open
+    action: mecdaisy
+  - command:
+    input: Abra o mecdaisy
+    entity: open
+    action: mecdaisy
+  # Acessando sites
+  # Google
+  - command:
+    input:  Acesse o google
+    entity: access
+    action: google
+  - command:
+    input:  Acesse o site google
+    entity: access
+    action: google
+  # Gmail
+  - command:
+    input:  Acesse o site do gmail
+    entity: access
+    action: gmail
+  - command:
+    input:  Acesse o gmail
+    entity: access
+    action: gmail
+  # Tradutor
+  - command:
+    input: Acesse o tradutor do google
+    entity: access
+    action: gglTranslate
+  - command:
+    input: Acesse o google tradutor
+    entity: access
+    action: gglTranslate
+  # Dosvox
+  - command:
+    input:  Acesse o site do dosvox
+    entity: access
+    action: dosvox
+  - command:
+    input:  Acesse o dosvox
+    entity: access
+    action: dosvox
+  # Jaws
+  - command:
+    input:  Acesse o site do jaws
+    entity: access
+    action: jaws
+  - command:
+    input:  Acesse o jaws
+    entity: access
+    action: jaws
+  

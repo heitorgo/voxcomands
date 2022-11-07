@@ -1,6 +1,13 @@
-open\chrome
 open\wMP
-open\notepad
-time\getTime
-open\word
+open\dosvox
 time\getDate
+access\google
+access\jaws
+access\dosvox
+open\mecdaisy
+access\gmail
+open\word
+open\jaws
+open\notepad
+access\gglTranslate
+time\getTime
