@@ -1,8 +1,7 @@
 import yaml
 import numpy as np
-import tensorflow as tf
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense, Embedding
+from tensorflow.keras.layers import LSTM, Dense
 from tensorflow.keras.utils import to_categorical
 
 data = yaml.safe_load(open('nlu\\train.yml', 'r', encoding='utf-8').read())
@@ -71,7 +70,7 @@ model.add(Dense(len(output_data), activation='softmax'))
 
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['acc'])
 
-model.fit(input_data, output_data, epochs=128)
+model.fit(input_data, output_data, epochs=256)
 
 # Salvar model
 model.save('model.h5')
