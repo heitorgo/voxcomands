@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+access\gmail
+access\virtualvision
+open\dosvox
+open\notepad
+access\gglTranslate
+access\mecdaisy
+open\jaws
+access\dosvox
+open\word
+time\getTime
+access\nvda
+open\wMP
+access\google
+time\getDate
+access\jaws
+=======
 open\wMP
 open\dosvox
 time\getDate
@@ -11,3 +28,4 @@ open\jaws
 open\notepad
 access\gglTranslate
 time\getTime
+>>>>>>> 875ea816da9b0835fa70a58a655f218f36d1dd6b
