@@ -5,7 +5,6 @@ import queue
 import sounddevice as sd
 import vosk
 import sys
-from nlu.classifier import max_seq
 from methods.evaluater import evaluate
 from methods.speaker import speak
 
