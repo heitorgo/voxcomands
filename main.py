@@ -89,9 +89,18 @@ try:
                 result = json.loads(result)
                 if result is not None:
                     if result['text'] != "":
+<<<<<<< HEAD
                             text = result['text']
                             if evaluate(text) != 'text\\tooBig':
                                 parser.exit(0)
+=======
+                        if len(result['text']) > max_seq:
+                            result['text'] = ""
+                        else:
+                            text = result['text']
+                            evaluate(text)
+                            parser.exit(0)
+>>>>>>> 875ea816da9b0835fa70a58a655f218f36d1dd6b
 
             else:
                 print(rec.PartialResult())

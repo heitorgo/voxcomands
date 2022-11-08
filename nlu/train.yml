@@ -44,6 +44,7 @@ commands:
     input:  Abra o word
     entity: open
     action: word
+<<<<<<< HEAD
   - command:
     input:  Abrir o olho
     entity: open
@@ -52,6 +53,8 @@ commands:
     input:  Abra hoje
     entity: open
     action: word
+=======
+>>>>>>> 875ea816da9b0835fa70a58a655f218f36d1dd6b
   # Windows Media Player
   - command:
     input:  Abrir o reprodutor de mídia
@@ -71,10 +74,13 @@ commands:
     entity: open
     action: dosvox
   - command:
+<<<<<<< HEAD
     input: Abrir o dose rock
     entity: open
     action: dosvox
   - command:
+=======
+>>>>>>> 875ea816da9b0835fa70a58a655f218f36d1dd6b
     input: Abra o dose rock
     entity: open
     action: dosvox
@@ -87,6 +93,7 @@ commands:
     input: Abra o jaws
     entity: open
     action: jaws
+<<<<<<< HEAD
   - command:
     input: Abrir o deus
     entity: open
@@ -95,6 +102,17 @@ commands:
     input: Abra odiosos
     entity: open
     action: jaws
+=======
+  # Mecfaisy
+  - command:
+    input: Abrir o mecdaisy
+    entity: open
+    action: mecdaisy
+  - command:
+    input: Abra o mecdaisy
+    entity: open
+    action: mecdaisy
+>>>>>>> 875ea816da9b0835fa70a58a655f218f36d1dd6b
   # Acessando sites
   # Google
   - command:
@@ -114,6 +132,7 @@ commands:
     input:  Acesse o gmail
     entity: access
     action: gmail
+<<<<<<< HEAD
   - command:
     input:  Acesse hoje
     entity: access
@@ -122,6 +141,8 @@ commands:
     input:  Acesse o site hoje
     entity: access
     action: gmail
+=======
+>>>>>>> 875ea816da9b0835fa70a58a655f218f36d1dd6b
   # Tradutor
   - command:
     input: Acesse o tradutor do google
@@ -140,6 +161,7 @@ commands:
     input:  Acesse o dosvox
     entity: access
     action: dosvox
+<<<<<<< HEAD
   - command:
     input: Acesse o site do dose rock
     entity: access
@@ -148,6 +170,8 @@ commands:
     input: Acesse o dose rock
     entity: access
     action: dosvox
+=======
+>>>>>>> 875ea816da9b0835fa70a58a655f218f36d1dd6b
   # Jaws
   - command:
     input:  Acesse o site do jaws
@@ -157,6 +181,7 @@ commands:
     input:  Acesse o jaws
     entity: access
     action: jaws
+<<<<<<< HEAD
   - command:
     input:  Acesse o site do de aos
     entity: access
@@ -212,3 +237,6 @@ commands:
     input:  Acesse o mec
     entity: access
     action: mecdaisy
+=======
+  
+>>>>>>> 875ea816da9b0835fa70a58a655f218f36d1dd6b
