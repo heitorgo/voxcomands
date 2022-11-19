@@ -1,3 +1,4 @@
+import keyboard
 import argparse
 import os
 import json
@@ -50,7 +51,7 @@ args = parser.parse_args(remaining)
 
 try:
     speak('Olá, sou sua assistente virtual...')
-
+    speak('Precione a tecla f1 para me acionar e ctrl-c para me finalizar')
     if args.model is None:
         args.model = "model"
     if not os.path.exists(args.model):
@@ -77,25 +78,22 @@ try:
     
 
 # LOOP DO RECONHECIMENTO
-        print('#' * 80)
-        print('Press Ctrl+C to stop the recording')
-        print('#' * 80)
         rec = vosk.KaldiRecognizer(model, args.samplerate)
         while True:
-            data = q.get()
-            if rec.AcceptWaveform(data):
-                result = rec.Result()
-                result = json.loads(result)
-                if result is not None:
-                    if result['text'] != "":
-                            text = result['text']
-                            if evaluate(text) != 'text\\tooBig':
-                                parser.exit(0)
+            if keyboard.is_pressed("f1"):
+                while True:
+                    data = q.get()
+                    if rec.AcceptWaveform(data):
+                        result = rec.Result()
+                        result = json.loads(result)
+                        if result is not None:
+                            if result['text'] != "":
+                                    text = result['text']
+                                    if evaluate(text) != 'text\\tooBig':
+                                        break
 
-            else:
-                print(rec.PartialResult())
-            if dump_fn is not None:
-                dump_fn.write(data)
+                    if dump_fn is not None:
+                        dump_fn.write(data)
 
 except KeyboardInterrupt:
     print('\nDone')
