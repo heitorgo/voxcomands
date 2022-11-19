@@ -50,7 +50,7 @@ parser.add_argument(
 args = parser.parse_args(remaining)
 
 try:
-    speak('Olá, sou sua assistente virtual..')
+    speak('Olá, sou sua assistente virtual...')
     speak('Precione a tecla f1 para me acionar e ctrl-c para me finalizar')
     if args.model is None:
         args.model = "model"
