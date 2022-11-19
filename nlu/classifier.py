@@ -23,7 +23,6 @@ for k, label in enumerate(labels):
     label2idx[label] = k
     idx2label[k] = label
 
-print(max_seq)
 
 # Classificar texto em um entidade
 def classify(text):
