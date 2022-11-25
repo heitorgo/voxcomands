@@ -1,0 +1,15 @@
+access\gmail
+access\virtualvision
+open\dosvox
+open\notepad
+access\gglTranslate
+access\mecdaisy
+open\jaws
+access\dosvox
+open\word
+time\getTime
+access\nvda
+open\wMP
+access\google
+time\getDate
+access\jaws

@@ -1,0 +1,202 @@
+commands:
+  # Hora
+  - command:
+    input:  Que horas são?
+    entity: time
+    action: getTime
+  - command:
+    input:  Me diga as horas.
+    entity: time
+    action: getTime
+  - command:
+    input:  Informe horas.
+    entity: time
+    action: getTime
+  # Data
+  - command:
+    input:  Qual é a data de hoje?
+    entity: time
+    action: getDate
+  - command:
+    input:  Data de hoje.
+    entity: time
+    action: getDate
+  - command:
+    input:  Informe a data de hoje.
+    entity: time
+    action: getDate
+  # Abrir
+  # Bloco de notas
+  - command:
+    input:  Abrir bloco de notas
+    entity: open
+    action: notepad
+  - command:
+    input:  Abra o bloco de notas
+    entity: open
+    action: notepad
+  # Word
+  - command:
+    input:  Abrir o word
+    entity: open
+    action: word
+  - command:
+    input:  Abra o word
+    entity: open
+    action: word
+  # Windows Media Player
+  - command:
+    input:  Abrir o reprodutor de mídia
+    entity: open
+    action: wMP
+  - command:
+    input:  Abra o reprodutor de mídia
+    entity: open
+    action: wMP
+  # Dosvox
+  - command:
+    input: Abrir o dosvox
+    entity: open
+    action: dosvox
+  - command:
+    input: Abra o dosvox
+    entity: open
+    action: dosvox
+  - command:
+    input: Abra o dose rock
+    entity: open
+    action: dosvox
+  # Jaws
+  - command:
+    input: Abrir o jaws
+    entity: open
+    action: jaws
+  - command:
+    input: Abra o jaws
+    entity: open
+    action: jaws
+  - command:
+    input: Abrir o deus
+    entity: open
+    action: jaws
+  - command:
+    input: Abra odiosos
+    entity: open
+    action: jaws
+  # Acessando sites
+  # Google
+  - command:
+    input:  Acesse o google
+    entity: access
+    action: google
+  - command:
+    input:  Acesse o site google
+    entity: access
+    action: google
+  # Gmail
+  - command:
+    input:  Acesse o site do gmail
+    entity: access
+    action: gmail
+  - command:
+    input:  Acesse o gmail
+    entity: access
+    action: gmail
+  - command:
+    input:  Acesse hoje
+    entity: access
+    action: gmail
+  - command:
+    input:  Acesse o site hoje
+    entity: access
+    action: gmail
+  # Tradutor
+  - command:
+    input: Acesse o tradutor do google
+    entity: access
+    action: gglTranslate
+  - command:
+    input: Acesse o google tradutor
+    entity: access
+    action: gglTranslate
+  # Dosvox
+  - command:
+    input:  Acesse o site do dosvox
+    entity: access
+    action: dosvox
+  - command:
+    input:  Acesse o dosvox
+    entity: access
+    action: dosvox
+  - command:
+    input: Acesse o site do dose rock
+    entity: access
+    action: dosvox
+  - command:
+    input: Acesse o dose rock
+    entity: access
+    action: dosvox
+  # Jaws
+  - command:
+    input:  Acesse o site do jaws
+    entity: access
+    action: jaws
+  - command:
+    input:  Acesse o jaws
+    entity: access
+    action: jaws
+  - command:
+    input:  Acesse o site do de aos
+    entity: access
+    action: jaws
+  - command:
+    input:  Acesse odiosos
+    entity: access
+    action: jaws
+  # Virtual Vision
+  - command:
+    input:  Acesse o site do virtual vison
+    entity: access
+    action: virtualvision
+  - command:
+    input:  Acesse o site do virtual visão
+    entity: access
+    action: virtualvision
+  - command:
+    input:  Acesse o virtual vision
+    entity: access
+    action: virtualvision
+  # NVDA
+  - command:
+    input:  Acesse o site do nvda
+    entity: access
+    action: nvda
+  - command:
+    input:  Acesse o nvda
+    entity: access
+    action: nvda
+  - command:
+    input:  Acesse o site do elaine
+    entity: access
+    action: nvda
+  - command:
+    input:  Acesse o elaine
+    entity: access
+    action: nvda
+  # Mecdaisy
+  - command:
+    input:  Acesse o site do mecdaisy
+    entity: access
+    action: mecdaisy
+  - command:
+    input:  Acesse o mecdaisy
+    entity: access
+    action: mecdaisy
+  - command:
+    input:  Acesse o site do mec
+    entity: access
+    action: mecdaisy
+  - command:
+    input:  Acesse o mec
+    entity: access
+    action: mecdaisy
