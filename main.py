@@ -1,13 +1,12 @@
-import keyboard
 import argparse
 import os
 import json
 import queue
 import sounddevice as sd
-import vosk
 import sys
 from methods.evaluater import evaluate
 from methods.speaker import speak
+from vosk import Model, KaldiRecognizer
 
 q = queue.Queue()
 
@@ -64,7 +63,7 @@ try:
 
 # RECONHECIMENTO DE FALA
 
-    model = vosk.Model(args.model)
+    model = Model(args.model)
 
     if args.filename:
         dump_fn = open(args.filename, "wb")
@@ -77,17 +76,11 @@ try:
     
 
 # LOOP DO RECONHECIMENTO
-        rec = vosk.KaldiRecognizer(model, args.samplerate)
+        rec = KaldiRecognizer(model, args.samplerate)
         while True:
-            data = q.get()
-            if rec.AcceptWaveform(data):
-                result = rec.Result()
-                result = json.loads(result)
-                if result is not None:
-                    if result['text'] != "":
-                        text = result['text']
-                        if evaluate(text) != 'text\\tooBig':
-                            parser.exit(0)
+            
+            text = input()
+            evaluate(text)
 
             if dump_fn is not None:
                 dump_fn.write(data)
